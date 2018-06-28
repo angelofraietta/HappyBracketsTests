@@ -89,7 +89,7 @@ This file wil give a short description of the examples
     MonitorIntegers               Monitor the values of clock count and beats and display in buddy controls in GUI
 
   [triggercontrol] - Trigger controls displayed as buttons
-    triggerControl          Sends a trigger to make a wave player switch frequencies
+    triggerControlSample          Sends a trigger to make a wave player switch frequencies
 
   [textcontrol] -  Text values displayed or set with a text box
     StringMonitor           Runs a clock and displays the value in a text box

@@ -66,7 +66,7 @@ public class MajorScale implements HBAction {
          * To create this, just type clockTimer
          ************************************************************/
         // create a clock and start changing frequency on each beat
-        final float CLOCK_INTERVAL = 300;
+        final float CLOCK_INTERVAL = 200;
 
         // Create a clock with beat interval of CLOCK_INTERVAL ms
         Clock clock = new Clock(CLOCK_INTERVAL);

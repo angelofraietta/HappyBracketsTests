@@ -14,7 +14,7 @@ public class TestScales implements HBAction {
         hb.reset();
         hb.setStatus(this.getClass().getSimpleName() + " Loaded");
 
-
+        System.out.println(this.getClass().getSimpleName() + "Loaded up ");
         /***** Type your HBAction code above this line ******/
     }
 
