@@ -39,7 +39,7 @@ public class SimulateControl implements HBAction {
         hb.setStatus(this.getClass().getSimpleName() + " Loaded");
 
         try {
-            broadcastAddress = InetAddress.getByName("localhost");
+            broadcastAddress = InetAddress.getByName("255.255.255.255");
 
             advertiseTxSocket = new DatagramSocket();
             advertiseTxSocket.setBroadcast(true);
@@ -95,7 +95,7 @@ public class SimulateControl implements HBAction {
                     /*** Write your DynamicControl code below this line ***/
 
                     resetTrigger.send();
-                    for (int i = 0; i < integerTextControl.getValue(); i++) {
+                    for (int i = 1; i <= integerTextControl.getValue(); i++) {
                         try {
                             UDPCachedMessage cached_message = new UDPCachedMessage(buildGlobalIntMessage(i));
                             DatagramPacket packet = cached_message.getCachedPacket();

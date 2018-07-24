@@ -19,7 +19,7 @@ public class MasterIntegerSend implements HBAction {
     final int NUMBER_AUDIO_CHANNELS = 1;
     final int CLOCK_INTERVAL = 10;
 
-    int nextExpectedValue = 0;
+    int nextExpectedValue = 1;
     int messageCount = 0;
     int errorCount = 0;
     BooleanControl runClock;
@@ -33,6 +33,20 @@ public class MasterIntegerSend implements HBAction {
         hb.reset();
         hb.setStatus(this.getClass().getSimpleName() + " Loaded");
 
+        /*************************************************************
+         * Create a Trigger type Dynamic Control
+         *
+         * Simply type globalTriggerControl to generate this code
+         *************************************************************/
+        TriggerControl displayValues = new TriggerControl(this, "Display") {
+            @Override
+            public void triggerEvent() {
+                /*** Write your DynamicControl code below this line ***/
+
+                /*** Write your DynamicControl code above this line ***/
+            }
+        }.setControlScope(ControlScope.GLOBAL);
+        /*** End DynamicControl showValues code ***/
         /*************************************************************
          * Create an integer type Dynamic Control that displays as a text box
          * Simply type intTextControl to generate this code
@@ -141,7 +155,7 @@ public class MasterIntegerSend implements HBAction {
             public void triggerEvent() {
                 /*** Write your DynamicControl code below this line ***/
 
-                nextExpectedValue = 0;
+                nextExpectedValue = 1;
                 messageCount = 0;
                 errorCount = 0;
                 errorCountDisplay.setValue(errorCount);
