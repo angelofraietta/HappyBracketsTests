@@ -1,7 +1,5 @@
 package soundglitch;
 
-import de.sciss.net.OSCListener;
-import de.sciss.net.OSCMessage;
 import net.beadsproject.beads.data.Buffer;
 import net.beadsproject.beads.ugens.Gain;
 import net.beadsproject.beads.ugens.WavePlayer;
@@ -11,11 +9,11 @@ import net.happybrackets.core.control.TriggerControl;
 import net.happybrackets.device.HB;
 
 import java.lang.invoke.MethodHandles;
-import java.net.SocketAddress;
 
-public class HowManyOscillators implements HBAction {
+public class StartupNumberOscillators implements HBAction {
     // Change to the number of audio Channels on your device
     final int NUMBER_AUDIO_CHANNELS = 1;
+
     final int INITIAL_OSCILLATORS = 15;
     int numOscillators = 0;
     IntegerTextControl numOscDisplay;
@@ -59,7 +57,7 @@ public class HowManyOscillators implements HBAction {
         };/*** End DynamicControl triggerControl code ***/
 
 
-        for(int i = 0; i < 15; i++) {
+        for(int i = 0; i < INITIAL_OSCILLATORS; i++) {
             addOscillator(hb);
         }
 
@@ -77,7 +75,6 @@ public class HowManyOscillators implements HBAction {
         numOscDisplay.setValue(numOscillators);
 
     }
-
     //<editor-fold defaultstate="collapsed" desc="Debug Start">
 
     /**

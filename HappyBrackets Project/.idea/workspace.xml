@@ -39,20 +39,44 @@
       <file leaf-file-name="SimpleAccelerometer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/examples/sensor/accelerometer/SimpleAccelerometer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="330">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccelerometerSound.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccelerometerSound.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/soundglitch/AccelerometerSound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" selection-start-column="8" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-column="8" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartupNumberOscillators.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/soundglitch/StartupNumberOscillators.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="startup.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/classes/startup.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HowManyOscillators.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/soundglitch/HowManyOscillators.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -101,9 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/examples/fmsynthesis/BasicFM.java" />
-        <option value="$PROJECT_DIR$/src/examples/fmsynthesis/RatioDepthFM.java" />
-        <option value="$PROJECT_DIR$/src/examples/midi/basic/MajorChord.java" />
         <option value="$PROJECT_DIR$/src/examples/midi/basic/MinorChord.java" />
         <option value="$PROJECT_DIR$/src/examples/midi/basic/SimpleMIDI.java" />
         <option value="$PROJECT_DIR$/src/examples/multiple/SampleController.java" />
@@ -152,6 +173,9 @@
         <option value="$PROJECT_DIR$/src/examples/contents.txt" />
         <option value="$PROJECT_DIR$/config/known_devices" />
         <option value="$PROJECT_DIR$/src/soundglitch/AccelerometerSound.java" />
+        <option value="$PROJECT_DIR$/data/classes/startup.txt" />
+        <option value="$PROJECT_DIR$/src/soundglitch/StartupNumberOscillators.java" />
+        <option value="$PROJECT_DIR$/src/soundglitch/HowManyOscillators.java" />
       </list>
     </option>
   </component>
@@ -162,8 +186,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1595" />
-    <option name="y" value="58" />
+    <option name="x" value="1491" />
+    <option name="y" value="23" />
     <option name="width" value="1745" />
     <option name="height" value="830" />
   </component>
@@ -213,6 +237,12 @@
             <path>
               <item name="HappyBrackets Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="HappyBrackets Project" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HappyBrackets Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HappyBrackets Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -245,21 +275,21 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/examples" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="soundglitch" />
+      <recent name="examples.midi.scales" />
+      <recent name="examples.pythonscript" />
+      <recent name="net.happybrackets.v2examples.threads" />
+      <recent name="net.happybrackets.v2examples.controls.booleancontrol" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/examples" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/src/net/happybrackets/v2examples/controls/integerControl" />
       <recent name="$PROJECT_DIR$/src/net/happybrackets/v2examples" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="examples.midi.scales" />
-      <recent name="examples.pythonscript" />
-      <recent name="net.happybrackets.v2examples.threads" />
-      <recent name="net.happybrackets.v2examples.controls.booleancontrol" />
-      <recent name="net.happybrackets.v2examples.controls.floatcontrol" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/examples" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -274,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleAccelerometer">
+  <component name="RunManager" selected="Application.HowManyOscillators">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -289,13 +319,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SampleTextControl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="examples.controls.textcontrol.SampleTextControl" />
+    <configuration name="HowManyOscillators" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="soundglitch.HowManyOscillators" />
       <module name="HappyBrackets Project" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="examples.controls.textcontrol.*" />
+          <option name="PATTERN" value="soundglitch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -311,13 +341,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="StringMonitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="examples.controls.textcontrol.StringMonitor" />
+    <configuration name="StartupNumberOscillators" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="soundglitch.StartupNumberOscillators" />
       <module name="HappyBrackets Project" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="examples.controls.textcontrol.*" />
+          <option name="PATTERN" value="soundglitch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -375,19 +405,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.SampleTextControl" />
-      <item itemvalue="Application.StringMonitor" />
       <item itemvalue="Application.TriggerControlSample" />
       <item itemvalue="Application.AccelerometerSound" />
       <item itemvalue="Application.SimpleAccelerometer" />
+      <item itemvalue="Application.StartupNumberOscillators" />
+      <item itemvalue="Application.HowManyOscillators" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HowManyOscillators" />
+        <item itemvalue="Application.StartupNumberOscillators" />
         <item itemvalue="Application.SimpleAccelerometer" />
         <item itemvalue="Application.AccelerometerSound" />
         <item itemvalue="Application.TriggerControlSample" />
-        <item itemvalue="Application.StringMonitor" />
-        <item itemvalue="Application.SampleTextControl" />
       </list>
     </recent_temporary>
   </component>
@@ -405,23 +435,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1595" y="58" width="1745" height="830" extended-state="0" />
+    <frame x="1491" y="23" width="1745" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49111748" weight="0.32804233" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50372493" side_tool="true" visible="true" weight="0.29232803" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5048711" side_tool="true" visible="true" weight="0.29100528" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.24878837" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.3953125" weight="0.34323922" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.39426935" weight="0.3425926" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49627507" visible="true" weight="0.29232803" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49512893" visible="true" weight="0.29100528" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22406876" />
-      <window_info anchor="right" id="HappyBrackets" order="3" sideWeight="0.496063" visible="true" weight="0.2252149" />
+      <window_info anchor="right" id="HappyBrackets" order="3" sideWeight="0.496063" visible="true" weight="0.23954155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -436,26 +467,25 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49353796" weight="0.32840723" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4921875" weight="0.32838038" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="HappyBrackets" order="4" sideWeight="0.496063" visible="true" weight="0.25555557" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.496063" weight="0.1648" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.37916666" weight="0.34293193" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.503937" side_tool="true" weight="0.20553781" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28055555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.37916666" weight="0.34293193" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4923611" weight="0.32591623" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.24878837" />
       <window_info anchor="right" x="105" y="191" width="1080" height="530" id="Documentation" order="8" type="FLOATING" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.63680553" weight="0.5497382" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
@@ -466,7 +496,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.48958334" weight="0.32591623" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.503937" side_tool="true" weight="0.20553781" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.24878837" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -495,20 +525,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/examples/events/clocks/SensorControlledClock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/events/clocks/SimpleClock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/events/clocks/VariableClock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -819,7 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/sensor/accelerometer/SimpleAccelerometer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="330">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
@@ -834,20 +850,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/classes/startup.txt">
+    <entry file="file://$PROJECT_DIR$/src/soundglitch/AccelerometerSound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-column="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/soundglitch/AccelerometerSound.java">
+    <entry file="file://$PROJECT_DIR$/data/classes/startup.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="8" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soundglitch/StartupNumberOscillators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/soundglitch/HowManyOscillators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
         </state>
       </provider>
     </entry>
