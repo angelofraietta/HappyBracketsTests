@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# we need to run this script in the context of PI, otherwise, we don't have authority of GUI
+if [ "$(id -un)" != "pi" ]; then
+    exec sudo -u pi $0 "$@"
+fi
+
+# let us see who we are - equivalent to whoami
+echo  $USER
+
+# we need to make environment variable
+export DISPLAY:=0
+stellarium
