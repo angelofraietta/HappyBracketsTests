@@ -16,7 +16,7 @@ import java.net.SocketAddress;
 public class HowManyOscillators implements HBAction {
     // Change to the number of audio Channels on your device
     final int NUMBER_AUDIO_CHANNELS = 1;
-    final int INITIAL_OSCILLATORS = 15;
+    final int INITIAL_OSCILLATORS = 1;
     int numOscillators = 0;
     IntegerTextControl numOscDisplay;
 

@@ -14,7 +14,7 @@ public class StartupNumberOscillators implements HBAction {
     // Change to the number of audio Channels on your device
     final int NUMBER_AUDIO_CHANNELS = 1;
 
-    final int INITIAL_OSCILLATORS = 19;
+    final int INITIAL_OSCILLATORS = 1;
     int numOscillators = 0;
     IntegerTextControl numOscDisplay;
 

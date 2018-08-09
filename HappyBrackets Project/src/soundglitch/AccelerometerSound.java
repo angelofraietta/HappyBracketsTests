@@ -19,7 +19,7 @@ public class AccelerometerSound implements HBAction {
     public void action(HB hb) {
         /***** Type your HBAction code below this line ******/
         // remove this code if you do not want other compositions to run at the same time as this one
-        hb.reset();
+        //hb.reset();
         hb.setStatus(this.getClass().getSimpleName() + " Loaded");
 
         final float INITIAL_FREQUENCY = 1000; // this is the frequency of the waveform we will make
@@ -30,16 +30,16 @@ public class AccelerometerSound implements HBAction {
 
 
         // create a wave player to generate a waveform based on frequency and waveform type
-        WavePlayer waveformGenerator = new WavePlayer(audioFrequency, Buffer.SINE);
+        //WavePlayer waveformGenerator = new WavePlayer(audioFrequency, Buffer.SINE);
 
         // set up a gain amplifier to control the volume
-        Gain gainAmplifier = new Gain(NUMBER_AUDIO_CHANNELS, audioVolume);
+        //Gain gainAmplifier = new Gain(NUMBER_AUDIO_CHANNELS, audioVolume);
 
         // connect our WavePlayer object into the Gain object
-        gainAmplifier.addInput(waveformGenerator);
+        //gainAmplifier.addInput(waveformGenerator);
 
         // Now plug the gain object into the audio output
-        hb.ac.out.addInput(gainAmplifier);
+        //hb.ac.out.addInput(gainAmplifier);
 
         /*****************************************************
          * Find an accelerometer sensor.
@@ -53,7 +53,8 @@ public class AccelerometerSound implements HBAction {
 
                 // scale our frequency so it will go between 100 and 200o Hz
                 float new_freq = Sensor.scaleValue(100, 2000, -1, 1, x_val);
-                audioFrequency.setValue(new_freq);
+                //audioFrequency.setValue(new_freq);
+                System.out.println(new_freq);
                 /******** Write your code above this line ********/
 
             }

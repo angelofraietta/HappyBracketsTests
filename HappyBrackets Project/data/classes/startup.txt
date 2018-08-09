@@ -1,4 +1,6 @@
 #list your startup classes, one on each line. Do not add an extension. 
 # Use dots between package names
 # Eg, examples.HelloWorld
-soundglitch.StartupNumberOscillators
+#stellarium.control.StellariumSlave
+#soundglitch.StartupNumberOscillators
+examples.multiple.SampleController
