@@ -36,8 +36,8 @@
       <file leaf-file-name="MonitorUptime.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/synchronisation/MonitorUptime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="105" column="62" lean-forward="true" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
+            <state relative-caret-position="52">
+              <caret line="143" column="68" selection-start-line="143" selection-start-column="68" selection-end-line="143" selection-end-column="68" />
               <folding>
                 <element signature="e#1071#1072#0" expanded="true" />
                 <element signature="e#1121#1122#0" expanded="true" />
@@ -90,6 +90,8 @@
       <find>sendMessage</find>
       <find>currentAlt</find>
       <find>sendAltAz</find>
+      <find>sendRelativerTime</find>
+      <find>triggerEvent</find>
     </findStrings>
     <replaceStrings>
       <replace>Create a Trigger type Dynamic Control</replace>
@@ -256,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ControlsSendPosition">
+  <component name="RunManager" selected="Application.MonitorUptime">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -293,13 +295,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="SimpleAccelerometer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="examples.sensor.accelerometer.SimpleAccelerometer" />
+    <configuration name="MonitorUptime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="synchronisation.MonitorUptime" />
       <module name="HappyBrackets Project" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="examples.sensor.accelerometer.*" />
+          <option name="PATTERN" value="synchronisation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -357,19 +359,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.SimpleAccelerometer" />
       <item itemvalue="Application.HelloWorld" />
       <item itemvalue="Application.WaitThread" />
       <item itemvalue="Application.ControlsSendPositionInThread" />
       <item itemvalue="Application.ControlsSendPosition" />
+      <item itemvalue="Application.MonitorUptime" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MonitorUptime" />
         <item itemvalue="Application.ControlsSendPosition" />
         <item itemvalue="Application.ControlsSendPositionInThread" />
         <item itemvalue="Application.WaitThread" />
         <item itemvalue="Application.HelloWorld" />
-        <item itemvalue="Application.SimpleAccelerometer" />
       </list>
     </recent_temporary>
   </component>
@@ -397,14 +399,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="91" width="1440" height="698" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.490701" weight="0.327787" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.6123033" side_tool="true" visible="true" weight="0.34276205" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.54005724" side_tool="true" visible="true" weight="0.39767054" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.24878837" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.3876967" weight="0.34276205" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.3869814" weight="0.34276205" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.48426324" weight="0.36605656" />
       <window_info id="Designer" order="2" />
@@ -413,7 +416,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46065807" weight="0.39767054" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4599428" visible="true" weight="0.39767054" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.496063" weight="0.1648" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -468,7 +471,7 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="39" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -733,16 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/HB.jar!/net/happybrackets/core/control/TriggerControl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -791,10 +784,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/HB.jar!/net/happybrackets/core/control/TriggerControl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/synchronisation/MonitorUptime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="105" column="62" lean-forward="true" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
+        <state relative-caret-position="52">
+          <caret line="143" column="68" selection-start-line="143" selection-start-column="68" selection-end-line="143" selection-end-column="68" />
           <folding>
             <element signature="e#1071#1072#0" expanded="true" />
             <element signature="e#1121#1122#0" expanded="true" />

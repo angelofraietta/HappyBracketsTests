@@ -16,7 +16,7 @@ public class StartupNumberOscillators implements HBAction {
     final int NUMBER_AUDIO_CHANNELS = 1;
 
     final int INITIAL_OSCILLATORS = 1;
-    int numOscillators = 0;
+    int numOscillators = 15;
     IntegerTextControl numOscDisplay;
 
     Gain masterGain;

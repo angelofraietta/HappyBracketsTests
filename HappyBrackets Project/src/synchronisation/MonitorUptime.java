@@ -64,6 +64,7 @@ public class MonitorUptime implements HBAction, HBReset {
                 /*** Write your DynamicControl code below this line ***/
                 System.out.println("**********************************************");
                 referenceTime = getUptime();
+
                 System.out.println("Synchronise Up time to " + referenceTime);
                 /*** Write your DynamicControl code above this line ***/
             }
@@ -122,9 +123,6 @@ public class MonitorUptime implements HBAction, HBReset {
             @Override
             public void triggerEvent() {
                 /*** Write your DynamicControl code below this line ***/
-                lastRequestTime = getRelativeTime();
-                System.out.println("**********************************************");
-                System.out.println("Reqest time " + lastRequestTime);
                 /*** Write your DynamicControl code above this line ***/
             }
         }.setControlScope(ControlScope.GLOBAL);
@@ -143,6 +141,17 @@ public class MonitorUptime implements HBAction, HBReset {
                 /*** write your code above this line ***/
 
                 try {
+                    // SStore our time, print, and then request time
+                    lastRequestTime = getRelativeTime();
+                    System.out.println("**********************************************");
+                    int seconds = (int) (lastRequestTime / 1000) % 60 ;
+                    int minutes = (int) ((lastRequestTime / (1000*60)) % 60);
+                    int hours   = (int) ((lastRequestTime / (1000*60*60)) % 24);
+
+                    String time_text = String.format("%02d", hours) + ":" + String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
+
+                    System.out.println("Reqest time " + lastRequestTime + " " + time_text);
+
                     sendRelativerTime.send();
                     Thread.sleep(SLEEP_TIME);
                 } catch (InterruptedException e) {
