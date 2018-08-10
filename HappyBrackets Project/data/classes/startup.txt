@@ -3,4 +3,5 @@
 # Eg, examples.HelloWorld
 #stellarium.control.StellariumSlave
 #soundglitch.StartupNumberOscillators
-examples.multiple.SampleController
+#examples.multiple.SampleController
+examples.basic.HelloWorld
