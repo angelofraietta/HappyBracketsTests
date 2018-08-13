@@ -1,16 +1,12 @@
 package gpio;
 
-import com.pi4j.io.gpio.GpioController;
+import com.pi4j.io.gpio.*;
 import net.happybrackets.core.HBAction;
 import net.happybrackets.core.HBReset;
 import net.happybrackets.device.HB;
 
 import java.lang.invoke.MethodHandles;
-import com.pi4j.io.gpio.GpioController;
-import com.pi4j.io.gpio.GpioFactory;
-import com.pi4j.io.gpio.GpioPinDigitalOutput;
-import com.pi4j.io.gpio.PinState;
-import com.pi4j.io.gpio.RaspiPin;
+
 /**
  * Purpose of the test is to Test GPIO Coming in
  *
@@ -22,7 +18,7 @@ import com.pi4j.io.gpio.RaspiPin;
  * ,
  *  - expecting BCM2708 or BCM2709. Please report this to projects@drogon.net
  */
-public class TestGPIO implements HBAction, HBReset {
+public class ToggleGPIO implements HBAction, HBReset {
     // Change to the number of audio Channels on your device
     final int NUMBER_AUDIO_CHANNELS = 1;
 
@@ -41,58 +37,48 @@ public class TestGPIO implements HBAction, HBReset {
         final GpioController gpio = GpioFactory.getInstance();
 
         // provision gpio pin #01 as an output pin and turn on
+        // This is actually GPIO_GEN01 - not GPIO 1. THis is also known as GPIO 18.
+        // http://pi4j.com/pins/model-zerow-rev1.html
         final GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "MyLED", PinState.HIGH);
 
-        // set shutdown state for this pin
-        pin.setShutdownOptions(true, PinState.LOW);
+        /***********************************************************
+         * Create a runnable thread object
+         * simply type threadFunction to generate this code
+         ***********************************************************/
+        Thread thread = new Thread(() -> {
+            int SLEEP_TIME = 1000;
+            while (!exitThread) {
+                /*** write your code below this line ***/
 
-        System.out.println("--> GPIO state should be: ON");
+                    // toggle the current state of gpio pin #01 (should turn on)
+                    pin.toggle();
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+                /*** write your code above this line ***/
 
-        // turn off gpio pin #01
-        pin.low();
-        System.out.println("--> GPIO state should be: OFF");
+                try {
+                    Thread.sleep(SLEEP_TIME);
+                } catch (InterruptedException e) {
+                    /*** remove the break below to just resume thread or add your own action***/
+                    break;
+                    /*** remove the break above to just resume thread or add your own action ***/
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+                }
+            }
+            // stop all GPIO activity/threads by shutting down the GPIO controller
+            // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
+            gpio.shutdown();
 
-        // toggle the current state of gpio pin #01 (should turn on)
-        pin.toggle();
-        System.out.println("--> GPIO state should be: ON");
+            System.out.println("Exiting ControlGpioExample");
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        });
 
-        // toggle the current state of gpio pin #01  (should turn off)
-        pin.toggle();
-        System.out.println("--> GPIO state should be: OFF");
+        /*** write your code you want to execute before you start the thread below this line ***/
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        /*** write your code you want to execute before you start the thread above this line ***/
 
-        // turn on gpio pin #01 for 1 second and then off
-        System.out.println("--> GPIO state should be: ON for only 1 second");
-        pin.pulse(1000, true); // set second argument to 'true' use a blocking call
+        thread.start();
+        /****************** End threadFunction **************************/
 
-        // stop all GPIO activity/threads by shutting down the GPIO controller
-        // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
-        gpio.shutdown();
-
-        System.out.println("Exiting ControlGpioExample");
         /***** Type your HBAction code above this line ******/
     }
 
