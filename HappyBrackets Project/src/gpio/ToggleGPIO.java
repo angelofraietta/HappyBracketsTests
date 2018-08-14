@@ -33,10 +33,10 @@ public class ToggleGPIO implements HBAction, HBReset {
 
         System.out.println("<--Pi4J--> GPIO Control Example ... started.");
 
-        // create gpio controller
+        // create gpioController controller
         final GpioController gpio = GpioFactory.getInstance();
 
-        // provision gpio pin #01 as an output pin and turn on
+        // provision gpioController pin #01 as an output pin and turn on
         // This is actually GPIO_GEN01 - not GPIO 1. THis is also known as GPIO 18.
         // http://pi4j.com/pins/model-zerow-rev1.html
         final GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "MyLED", PinState.HIGH);
@@ -50,7 +50,7 @@ public class ToggleGPIO implements HBAction, HBReset {
             while (!exitThread) {
                 /*** write your code below this line ***/
 
-                    // toggle the current state of gpio pin #01 (should turn on)
+                    // toggle the current state of gpioController pin #01 (should turn on)
                     pin.toggle();
 
                 /*** write your code above this line ***/
@@ -64,6 +64,9 @@ public class ToggleGPIO implements HBAction, HBReset {
 
                 }
             }
+
+            // we really have to unprovision pin, otherwise we can't get it again
+            gpio.unprovisionPin(pin);
             // stop all GPIO activity/threads by shutting down the GPIO controller
             // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
             gpio.shutdown();

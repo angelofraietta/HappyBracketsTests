@@ -1,7 +1,6 @@
 package gpio;
 
 import com.pi4j.io.gpio.*;
-import com.pi4j.io.gpio.event.GpioPinListener;
 import com.pi4j.io.gpio.trigger.GpioCallbackTrigger;
 import net.happybrackets.core.HBAction;
 import net.happybrackets.core.HBReset;
@@ -10,6 +9,8 @@ import net.happybrackets.device.HB;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.management.ManagementFactory;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 
 /**
@@ -32,6 +33,12 @@ public class FollowGPIO implements HBAction, HBReset {
     long maxTime = 0;
 
     boolean exitThread = false;
+
+    List<GpioPin> provisionedPins = new ArrayList<>();
+    GpioController gpioController;
+
+    GpioPinDigitalInput inputPin;
+
     @Override
     public void action(HB hb) {
         /***** Type your HBAction code below this line ******/
@@ -42,23 +49,27 @@ public class FollowGPIO implements HBAction, HBReset {
 
         System.out.println("<--Pi4J--> GPIO Control Example ... started.");
 
-        // create gpio controller
-        final GpioController gpio = GpioFactory.getInstance();
+        // create gpioController controller
+        gpioController = GpioFactory.getInstance();
 
-        final GpioPinDigitalInput myButton = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02,
+        inputPin = gpioController.provisionDigitalInputPin(RaspiPin.GPIO_02,
                 PinPullResistance.PULL_DOWN);
 
-        // provision gpio pin #01 as an output pin and turn on
+        provisionedPins.add(inputPin);
+
+        // provision gpioController pin #01 as an output pin and turn on
         // This is actually GPIO_GEN01 - not GPIO 1. THis is also known as GPIO 18.
         // http://pi4j.com/pins/model-zerow-rev1.html
-        final GpioPinDigitalOutput outputPin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "MyLED", PinState.LOW);
+        final GpioPinDigitalOutput outputPin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "MyLED", PinState.LOW);
+
+        provisionedPins.add(outputPin);
 
         // Initialise our value
         lastPulseTime = getUptime();
 
-        // create a gpio callback trigger on gpio pin#4; when #4 changes state, perform a callback
+        // create a gpioController callback trigger on gpioController pin#4; when #4 changes state, perform a callback
         // invocation on the user defined 'Callable' class instance
-        myButton.addTrigger(new GpioCallbackTrigger(new Callable<Void>() {
+        inputPin.addTrigger(new GpioCallbackTrigger(new Callable<Void>() {
             public Void call() throws Exception {
 
                 // let us find out how long it takes to get the
@@ -149,7 +160,14 @@ public class FollowGPIO implements HBAction, HBReset {
 
     @Override
     public void doReset() {
+        inputPin.removeAllTriggers();
+        inputPin.removeAllListeners();
         exitThread = true;
+        for (GpioPin pin : provisionedPins)
+        {
+            gpioController.unprovisionPin(pin);
+        }
+
     }
     //</editor-fold>
 }
