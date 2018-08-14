@@ -57,6 +57,7 @@ public class FollowGPIO implements HBAction, HBReset {
 
         provisionedPins.add(inputPin);
 
+
         // provision gpioController pin #01 as an output pin and turn on
         // This is actually GPIO_GEN01 - not GPIO 1. THis is also known as GPIO 18.
         // http://pi4j.com/pins/model-zerow-rev1.html
